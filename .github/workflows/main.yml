@@ -22,7 +22,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git checkout -B deploy
         git push -f origin deploy
-    - name: Deploy to production
+    - name: Deploy to production1
       uses: appleboy/ssh-action@master
       with:
         username: deployer
