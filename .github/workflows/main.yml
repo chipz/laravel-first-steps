@@ -16,7 +16,6 @@ jobs:
       with:
         node-version: '12.x'
     - run: npm install
-    - run: npm run production
     - name: Commit built assets
       run: |
         git config --local user.email "action@github.com"
@@ -31,4 +30,4 @@ jobs:
         username: deployer
         host: 13.228.113.90
         password: ${{ secrets.SSH_PASSWORD }}
-        script: 'cd /var/www/html && ./server_deploy.sh'
+        script: 'cd /var/www/test-laravel && ./server_deploy.sh'
